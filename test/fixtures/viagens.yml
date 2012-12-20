@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  titulo: MyString
+  origem: 
+  destino: 
+  distancia: 1
+  saida: 2012-12-11
+  retorno: 2012-12-11
+  motora: 
+  valor_contrato: 1.5
+
+two:
+  titulo: MyString
+  origem: 
+  destino: 
+  distancia: 1
+  saida: 2012-12-11
+  retorno: 2012-12-11
+  motora: 
+  valor_contrato: 1.5
