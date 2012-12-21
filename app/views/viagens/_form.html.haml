@@ -1,0 +1,37 @@
+= form_for @viagem do |f|
+  - if @viagem.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@viagem.errors.count, "error")} prohibited this viagem from being saved:"
+      %ul
+        - @viagem.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :titulo
+    = f.text_field :titulo
+  .field
+    = f.label :data_saida
+    = f.datetime_select :data_saida
+  .field
+    = f.label :data_retorno
+    = f.datetime_select :data_retorno
+  .field
+    = f.label :local_saida
+    = f.text_field :local_saida
+  .field
+    = f.label :local_retorno
+    = f.text_field :local_retorno
+  .field
+    = f.label :descricao
+    = f.text_field :descricao
+  .field
+    = f.label :contratante
+    = f.text_field :contratante
+  .field
+    = f.label :custo_global
+    = f.text_field :custo_global
+  .field
+    = f.label :receita_global
+    = f.text_field :receita_global
+  .actions
+    = f.submit 'Save'

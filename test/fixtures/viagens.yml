@@ -2,20 +2,22 @@
 
 one:
   titulo: MyString
-  origem: 
-  destino: 
-  distancia: 1
-  saida: 2012-12-11
-  retorno: 2012-12-11
-  motora: 
-  valor_contrato: 1.5
+  data_saida: 2012-12-20 21:31:47
+  data_retorno: 2012-12-20 21:31:47
+  local_saida: MyString
+  local_retorno: MyString
+  descricao: MyString
+  contratante: MyString
+  custo_global: 1.5
+  receita_global: 1.5
 
 two:
   titulo: MyString
-  origem: 
-  destino: 
-  distancia: 1
-  saida: 2012-12-11
-  retorno: 2012-12-11
-  motora: 
-  valor_contrato: 1.5
+  data_saida: 2012-12-20 21:31:47
+  data_retorno: 2012-12-20 21:31:47
+  local_saida: MyString
+  local_retorno: MyString
+  descricao: MyString
+  contratante: MyString
+  custo_global: 1.5
+  receita_global: 1.5

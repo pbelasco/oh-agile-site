@@ -2,7 +2,7 @@ class ViagensController < ApplicationController
   # GET /viagens
   # GET /viagens.json
   def index
-    @viagens = Viagem.all
+    @viagens = Viagem.all 
 
     respond_to do |format|
       format.html # index.html.erb
@@ -24,7 +24,7 @@ class ViagensController < ApplicationController
   # GET /viagens/new
   # GET /viagens/new.json
   def new
-    @viagem = Viagem.new
+    @viagem = Viagem.new 
 
     respond_to do |format|
       format.html # new.html.erb

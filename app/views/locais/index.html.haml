@@ -1,0 +1,33 @@
+%h1 Listing locais
+
+%table
+  %tr
+    %th Titulo
+    %th Descricao
+    %th Logradouro
+    %th Numero
+    %th Complemento
+    %th Cep
+    %th Lat
+    %th Lon
+    %th
+    %th
+    %th
+
+  - @locais.each do |local|
+    %tr
+      %td= local.titulo
+      %td= local.descricao
+      %td= local.logradouro
+      %td= local.numero
+      %td= local.complemento
+      %td= local.cep
+      %td= local.lat
+      %td= local.lon
+      %td= link_to 'Show', local
+      %td= link_to 'Edit', edit_local_path(local)
+      %td= link_to 'Destroy', local, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Local', new_local_path

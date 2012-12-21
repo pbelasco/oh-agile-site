@@ -18,7 +18,7 @@ class ViagensControllerTest < ActionController::TestCase
 
   test "should create viagem" do
     assert_difference('Viagem.count') do
-      post :create, viagem: { distancia: @viagem.distancia, motora: @viagem.motora, retorno: @viagem.retorno, saida: @viagem.saida, titulo: @viagem.titulo, valor_contrato: @viagem.valor_contrato }
+      post :create, viagem: { contratante: @viagem.contratante, custo_global: @viagem.custo_global, data_retorno: @viagem.data_retorno, data_saida: @viagem.data_saida, descricao: @viagem.descricao, local_retorno: @viagem.local_retorno, local_saida: @viagem.local_saida, receita_global: @viagem.receita_global, titulo: @viagem.titulo }
     end
 
     assert_redirected_to viagem_path(assigns(:viagem))
@@ -35,7 +35,7 @@ class ViagensControllerTest < ActionController::TestCase
   end
 
   test "should update viagem" do
-    put :update, id: @viagem, viagem: { distancia: @viagem.distancia, motora: @viagem.motora, retorno: @viagem.retorno, saida: @viagem.saida, titulo: @viagem.titulo, valor_contrato: @viagem.valor_contrato }
+    put :update, id: @viagem, viagem: { contratante: @viagem.contratante, custo_global: @viagem.custo_global, data_retorno: @viagem.data_retorno, data_saida: @viagem.data_saida, descricao: @viagem.descricao, local_retorno: @viagem.local_retorno, local_saida: @viagem.local_saida, receita_global: @viagem.receita_global, titulo: @viagem.titulo }
     assert_redirected_to viagem_path(assigns(:viagem))
   end
 

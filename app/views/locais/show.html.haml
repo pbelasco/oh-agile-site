@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Titulo:
+  = @local.titulo
+%p
+  %b Descricao:
+  = @local.descricao
+%p
+  %b Logradouro:
+  = @local.logradouro
+%p
+  %b Numero:
+  = @local.numero
+%p
+  %b Complemento:
+  = @local.complemento
+%p
+  %b Cep:
+  = @local.cep
+%p
+  %b Lat:
+  = @local.lat
+%p
+  %b Lon:
+  = @local.lon
+
+= link_to 'Edit', edit_local_path(@local)
+\|
+= link_to 'Back', locais_path
