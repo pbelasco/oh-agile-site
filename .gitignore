@@ -13,4 +13,6 @@ capybara-*.html
 /spec/tmp/*
 **.orig
 rerun.txt
-pickle-email-*.htmlconfig/initializers/carrierwave.rb
+pickle-email-*.html
+config/initializers/carrierwave.rb
+
