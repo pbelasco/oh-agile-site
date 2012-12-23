@@ -1,0 +1,21 @@
+%h1 Listing habilidades
+
+%table
+  %tr
+    %th Nome
+    %th Tipo
+    %th
+    %th
+    %th
+
+  - @habilidades.each do |habilidade|
+    %tr
+      %td= habilidade.nome
+      %td= habilidade.tipo
+      %td= link_to 'Show', habilidade
+      %td= link_to 'Edit', edit_habilidade_path(habilidade)
+      %td= link_to 'Destroy', habilidade, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Habilidade', new_habilidade_path

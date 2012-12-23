@@ -1,7 +1,6 @@
-%h1 Editing local
-
+%h1 Editando local
 = render 'form'
-
-= link_to 'Show', @local
-\|
-= link_to 'Back', locais_path
+.row
+	.twelve.columns
+		= link_to 'Detalhes do local', @local, :class => [:button, :secondary]
+		= link_to 'Voltar para lista', locais_path, :class => [:button, :secondary]

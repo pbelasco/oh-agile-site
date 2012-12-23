@@ -1,0 +1,43 @@
+= form_for @tripulante do |f|
+  - if @tripulante.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@tripulante.errors.count, "error")} prohibited this tripulante from being saved:"
+      %ul
+        - @tripulante.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :bio
+    = f.text_area :bio
+  .field
+    = f.label :nome
+    = f.text_field :nome
+  .field
+    = f.label :email
+    = f.text_field :email
+  .field
+    = f.label :telefone
+    = f.text_field :telefone
+  .field
+    = f.label :rg
+    = f.text_field :rg
+  .field
+    = f.label :cpf
+    = f.text_field :cpf
+  .field
+    = f.label :facebook
+    = f.text_field :facebook
+  .field
+    = f.label :twitter
+    = f.text_field :twitter
+  .field
+    = f.label :nascimento
+    = f.date_select :nascimento
+  .field
+    = f.label :genero
+    = f.text_field :genero
+  .field
+    = f.label :foto
+    = f.text_field :foto
+  .actions
+    = f.submit 'Save'

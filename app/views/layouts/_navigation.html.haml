@@ -1,1 +1,13 @@
-= link_to "Busao", root_path, :class => 'brand'
+%ul.nav-bar
+	%li.active.support.tag
+		= link_to "O Projeto", root_path
+	%li.has-flyout
+		= link_to "Invasoes", "#"
+		%a.flyout-toggle{:href => "#"}
+			%span=""
+		%ul.flyout
+			%li 
+				= link_to 'Viagens', [:viagens]
+				= link_to 'Locais', [:locais]
+				= link_to 'Tripulantes', [:tripulantes]
+ 

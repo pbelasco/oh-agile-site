@@ -40,12 +40,15 @@ class ViagensController < ApplicationController
   # POST /viagens
   # POST /viagens.json
   def create
-    @viagem = Viagem.new(params[:viagem])
+    @viagem = Viagem.new params[:viagem], :except => [:data_saida, :data_retorno]
+    @viagem.data_saida = Date.strptime(params[:viagem][:data_saida], '%d/%m/%Y')
+    @viagem.data_retorno = Date.strptime(params[:viagem][:data_retorno], '%d/%m/%Y')
 
     respond_to do |format|
       if @viagem.save
         format.html { redirect_to @viagem, notice: 'Viagem was successfully created.' }
         format.json { render json: @viagem, status: :created, location: @viagem }
+        format.js
       else
         format.html { render action: "new" }
         format.json { render json: @viagem.errors, status: :unprocessable_entity }
@@ -56,7 +59,9 @@ class ViagensController < ApplicationController
   # PUT /viagens/1
   # PUT /viagens/1.json
   def update
-    @viagem = Viagem.find(params[:id])
+    @viagem = Viagem.find params[:id], :except => [:data_saida, :data_retorno]
+    @viagem.data_saida = Date.strptime(params[:viagem][:data_saida], '%d/%m/%Y')
+    @viagem.data_retorno = Date.strptime(params[:viagem][:data_retorno], '%d/%m/%Y')
 
     respond_to do |format|
       if @viagem.update_attributes(params[:viagem])

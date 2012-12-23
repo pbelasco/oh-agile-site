@@ -1,0 +1,39 @@
+%h1 Listing tripulantes
+
+%table
+  %tr
+    %th Bio
+    %th Nome
+    %th Email
+    %th Telefone
+    %th Rg
+    %th Cpf
+    %th Facebook
+    %th Twitter
+    %th Nascimento
+    %th Genero
+    %th Foto
+    %th
+    %th
+    %th
+
+  - @tripulantes.each do |tripulante|
+    %tr
+      %td= tripulante.bio
+      %td= tripulante.nome
+      %td= tripulante.email
+      %td= tripulante.telefone
+      %td= tripulante.rg
+      %td= tripulante.cpf
+      %td= tripulante.facebook
+      %td= tripulante.twitter
+      %td= tripulante.nascimento
+      %td= tripulante.genero
+      %td= tripulante.foto
+      %td= link_to 'Show', tripulante
+      %td= link_to 'Edit', edit_tripulante_path(tripulante)
+      %td= link_to 'Destroy', tripulante, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Tripulante', new_tripulante_path
