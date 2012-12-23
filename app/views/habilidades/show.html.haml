@@ -1,0 +1,10 @@
+%p
+  %b Nome:
+  = @habilidade.nome
+%p
+  %b Tipo:
+  = @habilidade.tipo
+
+= link_to 'Edit', edit_habilidade_path(@habilidade)
+\|
+= link_to 'Back', habilidades_path

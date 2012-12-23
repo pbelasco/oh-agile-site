@@ -65,10 +65,12 @@ module Busao
     config.assets.enabled = true
 
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0'
+    config.assets.version = '0.01a'
 
     Mongoid.logger.level = Logger::DEBUG
     Moped.logger.level = Logger::DEBUG
+
+    config.assets.initialize_on_precompile = false
     
   end
 end

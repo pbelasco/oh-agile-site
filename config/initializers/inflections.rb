@@ -47,7 +47,7 @@ ActiveSupport::Inflector.inflections do |inflect|
   inflect.singular(/^(g|)ases$/i,  '\1ás')
  
   # Incontáveis
-  inflect.uncountable %w( tórax tênis ônibus lápis fênix )
+  inflect.uncountable %w( admin tórax tênis ônibus lápis fênix )
  
   # Irregulares
   inflect.irregular "país", "países"

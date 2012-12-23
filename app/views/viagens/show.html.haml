@@ -1,33 +1,26 @@
-%p#notice= notice
+.row.viagem
+  .twelve.columns
+    .row.header
+      .two.columns.thumb
+        = image_tag @viagem.imagem.thumb_med.url
+      .ten.columns.titulo
+        %h2= @viagem.titulo
+        %h5= "de #{@viagem.data_saida} a #{@viagem.data_retorno}"
+    .row
+      .eight.columns.descricao
+        = @viagem.descricao
 
-%p
-  %b Titulo:
-  = @viagem.titulo
-%p
-  %b Data saida:
-  = @viagem.data_saida
-%p
-  %b Data retorno:
-  = @viagem.data_retorno
-%p
-  %b Local saida:
-  = @viagem.local_saida
-%p
-  %b Local retorno:
-  = @viagem.local_retorno
-%p
-  %b Descricao:
-  = @viagem.descricao
-%p
-  %b Contratante:
-  = @viagem.contratante
-%p
-  %b Custo global:
-  = @viagem.custo_global
-%p
-  %b Receita global:
-  = @viagem.receita_global
+      .four.columns.informacoes
+        %p
+          %strong Contratante:
+          = @viagem.contratante
+        %p
+          %strong Custo global:
+          = @viagem.custo_global
+        %p
+          %strong Receita global:
+          = @viagem.receita_global
 
-= link_to 'Edit', edit_viagem_path(@viagem)
+= link_to 'Editar', edit_viagem_path(@viagem)
 \|
-= link_to 'Back', viagens_path
+= link_to 'Voltar', viagens_path

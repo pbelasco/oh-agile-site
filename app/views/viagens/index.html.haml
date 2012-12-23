@@ -1,12 +1,10 @@
-%h1 Listing viagens
+%h1 Todas as Viagens
 
 %table
   %tr
     %th Titulo
     %th Data saida
     %th Data retorno
-    %th Local saida
-    %th Local retorno
     %th Descricao
     %th Contratante
     %th Custo global
@@ -20,15 +18,13 @@
       %td= viagem.titulo
       %td= viagem.data_saida
       %td= viagem.data_retorno
-      %td= viagem.local_saida
-      %td= viagem.local_retorno
       %td= viagem.descricao
       %td= viagem.contratante
       %td= viagem.custo_global
       %td= viagem.receita_global
-      %td= link_to 'Show', viagem
-      %td= link_to 'Edit', edit_viagem_path(viagem)
-      %td= link_to 'Destroy', viagem, method: :delete, data: { confirm: 'Are you sure?' }
+      %td= link_to 'detalhes', viagem
+      %td= link_to 'Editar', edit_viagem_path(viagem)
+      %td= link_to 'Apagar', viagem, method: :delete, data: { confirm: 'Tem certeza?' }
 
 %br
 

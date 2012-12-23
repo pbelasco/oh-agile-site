@@ -1,0 +1,37 @@
+%p
+  %b Bio:
+  = @tripulante.bio
+%p
+  %b Nome:
+  = @tripulante.nome
+%p
+  %b Email:
+  = @tripulante.email
+%p
+  %b Telefone:
+  = @tripulante.telefone
+%p
+  %b Rg:
+  = @tripulante.rg
+%p
+  %b Cpf:
+  = @tripulante.cpf
+%p
+  %b Facebook:
+  = @tripulante.facebook
+%p
+  %b Twitter:
+  = @tripulante.twitter
+%p
+  %b Nascimento:
+  = @tripulante.nascimento
+%p
+  %b Genero:
+  = @tripulante.genero
+%p
+  %b Foto:
+  = @tripulante.foto
+
+= link_to 'Edit', edit_tripulante_path(@tripulante)
+\|
+= link_to 'Back', tripulantes_path

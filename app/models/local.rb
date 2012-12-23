@@ -1,5 +1,9 @@
 class Local
   include Mongoid::Document
+  include Mongoid::Timestamps 
+
+  belongs_to :viagem
+  
   field :titulo, type: String
   field :descricao, type: String
   field :logradouro, type: String
