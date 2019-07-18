@@ -10,7 +10,7 @@ gem 'thin',														'~> 1.5.0'
 gem 'carrierwave',                    '~> 0.6.2'
 gem 'carrierwave-mongoid'
 gem 'fog'
-gem 'mini_magick', '3.4'
+gem 'mini_magick', '4.9.4'
 
 gem 'jquery-ui-rails'
 
